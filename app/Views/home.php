@@ -5,13 +5,13 @@
     </div>
     <div class="bottom">
         <div class="letters-effect">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p id="left">GTACTGAACTGTCGAATGCTTAGCGCTTACGGAATCTGCCGTAATCGGCTA</p>
+            <p id="right">TAGGCTAACGTGCTTGGCTAGATCAGGTTGCAACCTAGGCTTGACTTCCA</p>
+            <p id="left">CCGTAAGCTAGGTAGCTAACCGTGTACGATTGCGTAGCCGTAGTGGCCGT</p>
+            <p id="right">ATGCAGTTGACGCTGGTACCGATAGGCTTGAAGCTTACCAGGTGCGTTAG</p>
+            <p id="left">CGTACGGCTTAAAGTGCGTACAGGTAGTCCGGAACCGTGTAATCCGGTAC</p>
         </div>
-        <a href="/liste">Entrer</a>
+        <a href="/GENOMES">Entrer</a>
     </div>
 </div>
 
@@ -34,12 +34,59 @@
     align-items: center;
     gap: 20px;
 }
-.container-home .bottom .letters-effect{
+.container-home .bottom .letters-effect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 400px;
     height: 200px;
     background-color: #d9d9d959;
     border-radius: 8px;
+    overflow: hidden;
+    position: relative;
 }
+
+.container-home .bottom .letters-effect p {
+    display: flex;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 1.8rem;
+    width: 100%;
+    position: relative;
+}
+
+.container-home .bottom .letters-effect #left {
+    animation: scroll-left 10s linear infinite;
+}
+
+.container-home .bottom .letters-effect #right {
+    animation: scroll-right 10s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#left, #right {
+    display: inline-block;
+    padding-right: 100%;
+}
+
 .container-home .bottom a{
     display: flex;
     color: white;

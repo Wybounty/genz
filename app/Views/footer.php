@@ -1,7 +1,7 @@
       
       <footer>
         <div class="dinguerie">
-            <h2>GENZ.<span>DATA</span></h2>
+            <h2><a href="/">GENZ.<span>DATA</span></a></h2>
             <p>© 2024 - SIBER FRANCIS</p>
             <div class="links">
                 <a href="https://www.instagram.com/reformed_francis/" target="_blank"><img src="/images/insta.svg" alt=""></a>
@@ -44,7 +44,10 @@ footer h2 {
     width: 100%;
     height: 100%;
 }
-
+footer h2 a{
+    text-decoration: none;
+    color: white;
+}
 footer p {
     font-size: 1.2rem;
     font-weight: 600;

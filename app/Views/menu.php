@@ -4,10 +4,10 @@
     </div>
     <div class="pages">
         <a href="/">ACCUEIL.</a>
-        <a href="#about">GENOMES.</a>
+        <a href="/GENOMES">GENOMES.</a>
     </div>
     <div class="bottom" class="links">
-        <a  href="/login">LOGIN</a>   
+        <a href="https://gp.linkedin.com/in/francis-siber-50635425a" target="_blank">Linkedin</a>
     </div>
 </div>
 
@@ -58,7 +58,7 @@
     gap: 20px;
 }
 .menu a{
-    color: #FB5607;
+    color: #3a86ff;
 }
 .menu .pages{
     display: flex;

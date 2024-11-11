@@ -7,7 +7,6 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
+$routes->get('/GENOMES', 'Liste::index');
 
-// Route qui montres tous les génomes de dingues
-$routes->get('/liste', 'Liste::index');
-
+$routes->get('/GENOMES/DATA/(:num)', 'Liste::getSelectedGenome/$1');

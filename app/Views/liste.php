@@ -1,94 +1,20 @@
 <div class="liste-genomes">
-    <form action="" method="POST">
-        <input type="search">
-        <button type="submit">RECHERCHER</button>
-    </form>
     <h1>BANK DISPONIBLE</h1>
     <div class="genomes">
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
+    <?php if (!empty($genomes)): ?>
+        <?php foreach ($genomes as $genome): ?>
+        <a href="<?= site_url('GENOMES/DATA/' . $genome['id']) ?>" id="linkcontent">
+            <div class="content">
+                <div class="items">
+                    <p id="sequence"><?= $genome['sequence_id'] ?></p>
+                    <p id="desc"><?= $genome['description'] ?></p>
+                </div>
             </div>
-        </div>
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
-            </div>
-        </div>
-        <div class="content">
-            <div class="item">
-                <p>nom genome</p>
-                <p>description du genome c'est asser long sa mere</p>
-                <p>date</p>
-            </div>
-        </div>
+        </a>
+    <?php endforeach; ?>
+    <?php else: ?>
+        <p>Aucun genomes trouvées trouvé.</p>
+    <?php endif; ?>
     </div>
 </div>
 
@@ -96,7 +22,7 @@
     .liste-genomes{
         display: flex;
         flex-direction: column;
-        height: 150vh;
+        height: 120vh;
         width: 100%;
         background-color: white;
         gap: 50px;
@@ -109,6 +35,10 @@
         height: 700px;
         width: 80%;
     }
+    .liste-genomes #linkcontent{
+        text-decoration: none;
+        color: black;
+    }
     .liste-genomes .genomes .content{
         display: flex;
         flex-direction: column;
@@ -120,8 +50,26 @@
         width: 90%;
         overflow: hidden;
         margin-bottom: 20px;
+        transition: background-color 0.5s, color 0.5s;
+        &:hover{
+            background-color: #AE264B;
+            color: white;
+        }
+    }
+    .liste-genomes .genomes .content .items{
+        width: 80%;
+    }
+    .liste-genomes .genomes .content #sequence{
+        font-weight: 800;
+        font-size: 1.3rem;
+    }
+    .liste-genomes .genomes .content #desc{
+        font-weight: 500;
+        font-size: 1rem;
+        width: 100%;
     }
     .liste-genomes h1{
+        font-size: 2.5rem;
         font-weight: 900;
         color: #AE264B;
     }

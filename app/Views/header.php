@@ -12,8 +12,7 @@
             <!-- Header -->
             <header>
                 <nav>
-                    <p></p>
-                    <h1>GENZ.<span>DATA</span></h1>
+                    <a href="/"><h1>GENZ.<span>DATA</span></h1></a>
                     <label class="hamburger" id="button-menu">
                         <input type="checkbox">
                         <svg viewBox="0 0 32 32">
