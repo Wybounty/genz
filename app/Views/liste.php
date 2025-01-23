@@ -73,4 +73,10 @@
         font-weight: 900;
         color: #AE264B;
     }
+    .liste-genomes .genomes .content .items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
